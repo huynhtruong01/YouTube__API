@@ -1,0 +1,387 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #302ae6;
+  --secondary-color: #536390;
+  --font-color: #424242;
+  --bg-color: #fff;
+  --heading-color: #292922;
+}
+
+[data-theme="dark"] {
+  --primary-color: #9a97f3;
+  --secondary-color: #818cab;
+  --font-color: #e1e1ff;
+  --bg-color: #161625;
+  --heading-color: #818cab;
+}
+
+html {
+  font-size: 15px;
+}
+
+body {
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.avatar {
+  position: relative;
+  width: 40px;
+  /* overflow: hidden; */
+  cursor: pointer;
+}
+
+.avatar .img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.avatar .img img{
+  width: 40px;
+}
+
+.avatar span{
+  position: absolute;
+  bottom: -35px;
+  left: -30px;
+  width: 90px;
+  text-align: center;
+  font-size: 11px;
+  padding: 5px;
+  font-weight: 700;
+  border-radius: 3px;
+  background: #333;
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(5px);
+  transition: all .3s ease-in-out;
+}
+
+.avatar span::before{
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 44px;
+  width: 10px;
+  height: 10px;
+  background: #333;
+  transform: rotate(45deg);
+  transition: all .3s ease-in-out;
+}
+
+.avatar:hover span{
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+header.header {
+  position: fixed;
+  width: 100%;
+  box-shadow: 0 5px 30px rgba(0 0 0 / 10%);
+  z-index: 1000;
+  background: #fff;
+}
+
+header.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 97%;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+.header__left {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  margin-right: 20px;
+}
+
+.menu i {
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 800;
+  color: #000;
+  position: relative;
+}
+
+.logo a i {
+  font-size: 32px;
+  color: #f00;
+}
+
+.logo a span {
+  position: absolute;
+  top: 0;
+  right: -10px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+form#form {
+  width: 700px;
+  height: 34px;
+  background: rgb(0 0 0 / 10%); 
+}
+
+form#form .form-group {
+  display: flex;
+  border-radius: 5px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+} 
+
+form#form .form-group input {
+  position: absolute;
+  top: 0;
+  border: 1px solid rgb(0 0 0 / 10%);
+  left: 0;
+  width: calc(100% - 80px);
+  height: 100%;
+  border-radius: 2px 0 0 2px;
+  outline: none;
+  padding: 7px;
+  font-size: 16px;
+}
+
+form#form .form-group input::placeholder {
+  font-size: 16px;
+}
+
+form#form .form-group input:focus{
+  border: 1px solid #3498db;
+}
+
+form#form .form-group button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 0 2px 2px 0;
+  transition: all 0.2s ease-in-out;
+}
+
+form#form .form-group button:hover {
+  background: rgba(0 0 0 / 8%);
+}
+
+form#form .form-group button i {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(0 0 0 / 30%);
+  transition: all 0.2s ease-in-out;
+}
+
+form#form .form-group button:hover i {
+  color: rgba(0 0 0 / 80%);
+}
+
+.header__right {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+}
+
+.live__stream {
+  margin-right: 20px;
+  cursor: pointer;
+  color: rgba(0 0 0 / 60%);
+  transition: all 0.2s ease-in-out;
+}
+
+.live__stream:hover {
+  color: rgba(0 0 0 / 90%);
+}
+
+.bell {
+  position: relative;
+  margin-right: 20px;
+  cursor: pointer;
+  font-size: 27px;
+  color: rgba(0 0 0 / 60%);
+  transition: all 0.2s ease-in-out;
+}
+
+.bell:hover {
+  color: rgba(0 0 0 / 90%);
+}
+
+.bell span {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -7px;
+  right: -5px;
+  font-size: 10px;
+  padding: 5px;
+  width: 21px;
+  height: 21px;
+  background: #f00;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 50%;
+}
+
+.check__mode {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  color: rgba(0 0 0 / 50%);
+}
+
+.check__mode span {
+  margin-right: 10px;
+  color: #d63031;
+}
+
+.check__mode .mode {
+  display: flex;
+  position: relative;
+  width: 50px;
+  height: 26px;
+  /* background: #f00; */
+}
+
+.check__mode .mode input {
+  border: none;
+  outline: none;
+  width: 100%;
+  display: none;
+}
+
+.mode .check {
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid rgba(0 0 0 / 50%); */
+  border-radius: 20px;
+  background: #d63031;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+.mode .check::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+  transition: all 0.3s ease-out;
+}
+
+.check__mode .mode input:checked ~ .check::before {
+  transform: translateX(23px);
+  background: #fff;
+}
+
+.check__mode .mode input:checked ~ .check {
+  background: #6c5ce7;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  top: 60px;
+  width: 100%;
+}
+
+.content__left {
+  position: fixed;
+  width: 240px;
+  height: 100%;
+  top: 60px;
+  z-index: 2;
+  padding: 15px 7px 0 0;
+  overflow: hidden;
+  transition: all .4s ease-in-out;
+}
+
+.content__left.active{
+  width: 72px;
+  padding-right: 0;
+}
+
+.content__left .item {
+  display: flex;
+  align-items: center;
+  padding: 10px 0 10px 0;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+.content__left .item:hover {
+  background: rgba(0 0 0 / 10%);
+}
+
+.content__left .item i {
+  color: rgba(0 0 0 / 70%);
+  font-size: 24px;
+  margin-right: 24px;
+  margin-left: 24px;
+}
+
+.content__left .item span {
+  font-size: 1rem;
+}
+
+.content__right {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: calc(100% - 240px);
+  padding: 25px 10px 25px 25px;
+  height: 1000px;
+  background: rgb(0 0 0 / 10%);
+  z-index: -1;
+  transition: all .4s ease-in;
+}
+
+.content__right.active{
+  width: calc(100% - 72px);
+}
+
+.content__right .videos {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  overflow: hidden;
+  z-index: -1;
+}
+
+iframe {
+  margin: 0 20px 20px 0;
+}

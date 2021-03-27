@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="style.css">
+  <title>YouTube API</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__left">
+        <div class="menu">
+          <i class='bx bx-menu'></i>
+        </div>
+        <div class="logo">
+          <a href="#">
+            <i class='bx bxl-youtube'></i>
+            YouTube
+            <span>vn</span>
+          </a>
+        </div>
+
+      </div>
+      <form id="form">
+        <div class="form-group">
+          <input type="text" name="" class="form-control" id="search" placeholder="Tìm kiếm">
+          <button type="submit">
+            <i class='bx bx-search'></i>
+          </button>
+        </div>
+        <!-- <div class="form-group">
+         <input type="submit" class="btn btn-danger" value="Search">
+       </div> -->
+      </form>
+      <div class="header__right">
+        <div class="live__stream">
+          <i class='bx bxs-camera-movie'></i>
+        </div>
+        <div class="bell">
+          <i class='bx bxs-bell'></i>
+          <span class="numberInfo">30+</span>
+        </div>
+        <div class="check__mode">
+          <span><i class='bx bxs-sun'></i></span>
+          <div class="mode">
+            <input type="checkbox" id="mode">
+            <label for="mode" class="check"></label>
+          </div>
+        </div>
+        <div class="avatar">
+          <div class="img">
+            <img src="./images/Hacker.jpg" alt="">
+          </div>
+          <span>Huynh Truong</span>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="content">
+    <div class="content__left">
+      <div class="content__left-1">
+        <div class="item">
+          <i class='bx bxs-home'></i>
+          <span>Trang chủ</span>
+        </div>
+        <div class="item">
+          <i class='bx bx-compass'></i>
+          <span>Khám phá</span>
+        </div>
+        <div class="item">
+          <i class='bx bxs-caret-right-square'></i>
+          <span>Kênh đăng ký</span>
+        </div>
+        <div class="item">
+          <i class='bx bxs-videos'></i>
+          <span>Thư viện</span>
+        </div>
+      </div>
+    </div>
+    <div class="content__right">
+      <div id="videos"></div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="./app.js"></script>
+  <script src="./style.js"></script>
+</body>
+
+</html>
